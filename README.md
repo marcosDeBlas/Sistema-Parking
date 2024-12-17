@@ -44,35 +44,54 @@ Este proyecto implementa un sistema de gestión de plazas de parking, cumpliendo
 
 ---
 
-## **Estructura del Proyecto**
+## Estructura del Proyecto
 
-ProyectoParking/
-│
-├── backend/
-│   ├── controllers/
-│   │   ├── parkingController.js  # Controlador de gestión de plazas
-│   │   └── userController.js     # Controlador de autenticación
-│   │
-│   ├── models/
-│   │   ├── ParkingSpot.js        # Modelo de plazas de parking
-│   │   └── user.js               # Modelo de usuario
-│   │
-│   ├── routes/
-│   │   ├── parkingRoutes.js      # Rutas relacionadas con plazas
-│   │   └── userRoutes.js         # Rutas relacionadas con autenticación
-│   │
-│   ├── middlewares/
-│   │   └── auth.js               # Middleware para proteger rutas
-│   │
-│   ├── .env                      # Configuración de variables de entorno
-│   ├── server.js                 # Configuración principal del servidor
-│   └── package.json              # Dependencias y scripts del proyecto
-│
-├── frontend/
-│   ├── index.html
+La estructura del proyecto se organiza de la siguiente manera:
+
+**ProyectoParking/**
+- **backend/** _(Contiene toda la lógica del servidor y la API)_
+  - **config/** _(Configuración del proyecto)_
+    - `db.js` - Configuración de la conexión a la base de datos MongoDB.
+  - **controllers/** _(Controladores para manejar la lógica de negocio)_
+    - `parkingController.js` - Controlador para la gestión de plazas de parking.
+    - `userController.js` - Controlador para la autenticación de usuarios (registro/login).
+  - **middlewares/** _(Middlewares para validaciones y seguridad)_
+    - `auth.js` - Middleware para verificar la autenticación con JWT.
+    - `errorHandler.js` - Middleware para manejar errores globales.
+  - **models/** _(Modelos de la base de datos MongoDB)_
+    - `ParkingSpot.js` - Modelo de las plazas de parking.
+    - `user.js` - Modelo de los usuarios.
+  - **routes/** _(Rutas de la API)_
+    - `parkingRoutes.js` - Rutas relacionadas con la gestión de plazas de parking.
+    - `userRoutes.js` - Rutas relacionadas con la autenticación de usuarios.
+  - `.env` - Variables de entorno (MongoDB URI, JWT Secret).
+  - `package.json` - Archivo con dependencias y scripts del backend.
+  - `package-lock.json` - Archivo generado para mantener consistencia de dependencias.
+  - `server.js` - Archivo principal del servidor con configuración Express.
+  - `node_modules/` - Dependencias instaladas para el backend.
+
+- **frontend/** _(Contiene la interfaz de usuario para el cliente)_
+  - **scripts/** _(Archivos JavaScript para la lógica del cliente)_
+    - `dashboard.js` - Lógica para la gestión de plazas en el frontend.
+    - `login.js` - Lógica para el inicio de sesión.
+    - `register.js` - Lógica para registrar nuevos usuarios.
+  - **styles/** _(Archivos de estilos CSS)_
+    - `custom.css` - Estilos personalizados para el proyecto.
+    - `tailwind.css` - Configuración de estilos usando Tailwind CSS.
+  - `dashboard.html` - Página principal para la gestión de plazas.
+  - `index.html` - Página de registro de usuarios.
+  - `login.html` - Página de inicio de sesión.
+  - `tailwind.config.js` - Configuración específica para Tailwind CSS.
+  - `package.json` - Archivo con dependencias y scripts del frontend.
+  - `package-lock.json` - Archivo generado para dependencias.
+  - `node_modules/` - Dependencias instaladas para el frontend.
+
+- **Archivos sueltos/** _(Documentación y recursos del proyecto)_
+  - `diagrama.png` - Imagen del diagrama de arquitectura.
+  - `PlanificacionProyecto.pdf` - Documento con la planificación del proyecto.
+  - `README.md` - Documentación completa del proyecto (este archivo).
 
 
----
 
 ## Diagrama de Arquitectura
 
