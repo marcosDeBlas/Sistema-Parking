@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Iniciar sesión</title> 
+
+    <!-- Enlace a la hoja de estilos personalizada -->
+    <link href="./styles/custom.css" rel="stylesheet">
+</head>
+<body class="bg-custom"> <!-- Fondo personalizado mediante la clase 'bg-custom' -->
+
+    <!-- Contenedor principal del formulario -->
+    <div class="max-w-lg mx-auto mt-10 p-6 bg-white shadow rounded">
+        <h1 class="text-2xl font-bold mb-4">Iniciar sesión</h1> <!-- Título de la página -->
+
+        <!-- Formulario de inicio de sesión -->
+        <form id="loginForm">
+            <!-- Campo para el nombre de usuario -->
+            <label class="block mb-2">Nombre de usuario</label>
+            <input id="username" type="text" 
+                class="w-full p-2 border rounded mb-4" 
+                placeholder="Ingresa tu usuario">
+
+            <!-- Campo para la contraseña -->
+            <label class="block mb-2">Contraseña</label>
+            <input id="password" type="password" 
+                class="w-full p-2 border rounded mb-4" 
+                placeholder="Ingresa tu contraseña">
+
+            <!-- Botón de envío del formulario -->
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
+                Iniciar sesión
+            </button>
+        </form>
+    </div>
+
+    <!-- Script para manejar el inicio de sesión -->
+    <script src="./scripts/login.js"></script>
+</body>
+</html>

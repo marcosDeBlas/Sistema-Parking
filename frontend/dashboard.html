@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Configuración de metadatos -->
+    <meta charset="UTF-8"> <!-- Configura la codificación de caracteres a UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Diseño responsivo -->
+    <title>Gestión de Plazas</title> <!-- Título de la página -->
+
+    <!-- Enlace a la hoja de estilos personalizada -->
+    <link href="./styles/custom.css" rel="stylesheet">
+</head>
+<body class="bg-custom"> <!-- Fondo personalizado mediante la clase 'bg-custom' -->
+    <!-- Contenedor principal -->
+    <div class="max-w-4xl mx-auto mt-10 p-6 bg-white shadow rounded">
+        <!-- Encabezado con título y botón de cerrar sesión -->
+        <div class="flex justify-between items-center mb-4">
+            <h1 class="text-2xl font-bold">Gestión de Plazas</h1> <!-- Título de la página -->
+            <button id="logoutButton" class="bg-red-500 text-white px-4 py-2 rounded">
+                Cerrar Sesión
+            </button> <!-- Botón para cerrar sesión -->
+        </div>
+
+        <!-- Mensaje de éxito o error -->
+        <div id="message" class="mb-4"></div> <!-- Contenedor para mostrar mensajes dinámicos -->
+
+        <!-- Campo de búsqueda -->
+        <input id="search" type="text" placeholder="Buscar plaza" 
+            class="w-full p-2 border rounded mb-4">
+        <!-- Input que permite buscar plazas en tiempo real -->
+
+        <!-- Formulario para agregar una nueva plaza -->
+        <form id="addSpotForm" class="mb-4">
+            <input id="number" type="number" placeholder="Número de la plaza" 
+                class="w-full p-2 border rounded mb-4">
+            <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">
+                Agregar Plaza
+            </button> <!-- Botón para enviar el formulario y agregar una nueva plaza -->
+        </form>
+
+        <!-- Formulario para asignar una plaza -->
+        <form id="assignSpotForm" class="mb-4">
+            <select id="spot" class="w-full p-2 border rounded mb-4" required>
+                <!-- Opciones de plazas disponibles (llenadas dinámicamente) -->
+            </select>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
+                Asignar Plaza
+            </button> <!-- Botón para asignar una plaza al usuario autenticado -->
+        </form>
+
+        <!-- Listado dinámico de plazas -->
+        <ul id="spotsList" class="list-disc pl-5"></ul> <!-- Listado de todas las plazas -->
+    </div>
+
+    <!-- Script principal que maneja las funcionalidades de la gestión -->
+    <script src="./scripts/dashboard.js"></script>
+</body>
+</html>
